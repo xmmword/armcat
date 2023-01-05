@@ -1,0 +1,1 @@
+gcc -shared -fPIC -o armlib.so src/armcat.c src/disasm.c src/decode.c -fsanitize=address, -g3

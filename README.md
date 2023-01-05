@@ -34,7 +34,8 @@ To compile `armcat`, simply execute the following script:
 
 int main(void) {
   const uint8_t instructions[] = {
-    "\x08\x50\xa0\xe1\x08\x20\x8a\xe2"
+    "\x08\x50\xa0\xe1" /* mov r5, r8 */
+    "\x08\x20\x8a\xe2" /* add r2, sl, #8 */
   };
 
   armcat_disasm_t *disassembly = armcat_disasm(instructions, sizeof(instructions));
